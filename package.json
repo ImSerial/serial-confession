@@ -1,0 +1,17 @@
+{
+  "name": "confession-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord pour confessions anonymes avec commandes slash et SQLite.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Djibril",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.0",
+    "dotenv": "^16.3.1",
+    "sqlite3": "^5.1.6"
+  }
+}
