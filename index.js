@@ -15,7 +15,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const TOKEN = process.env.TOKEN;
-const OWNER_ID = "1133246357960921158";
+const OWNERS = process.env.OWNERS.split(",");
 
 /* ---------------------------------------------------------
    SQLITE
@@ -466,7 +466,7 @@ client.on("interactionCreate", async interaction => {
             "bot-activities",
             "delete-confession"
         ].includes(name) &&
-        interaction.user.id !== OWNER_ID
+        !OWNERS.includes(interaction.user.id)
     ) {
         return interaction.reply({
             embeds: [noPermEmbed(interaction.user.id)],
